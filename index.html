@@ -3,17 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>68070199</title>
     <link rel = "stylesheet" href = "style.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink&display=swap" rel="stylesheet">
 <body>
     <nav>
         <p>68070199</p>
         <h2>ITF Website</h2>
         <p>Week14</p>
     </nav>
-    <div>
-        Enter number: <input type=""number id="myinput" value = "0">
+
+    <div class="info">
+        <img src="F:\IT KMITL\LAB\WEBLAB\itf-it68070199\picture\cat-walid.gif" style="float: left;width: 100px;">
+        <div class="HeadingText">
+            <h1><b>ITF Simple Bank</b></h1>
+            <p>Welcome to my first HTML + CSS + JS website!</p>
+        </div>
+    </div>
+    <div class="box move">
+        <div>
+            <h2>Account Overview</h2>
+            <div class="info">
+                <img src="F:\IT KMITL\LAB\WEBLAB\itf-it68070199\picture\user.png" alt="icon" class="icon">
+                <div>
+                    <h4>Account Information</h4>
+                    <p>Name: Athikarn Siengsai</p>
+                    <p>Type: Savings Account</p>
+                </div>
+            </div>
+            <div class="info">
+                <img src="F:\IT KMITL\LAB\WEBLAB\itf-it68070199\picture\briefcase.png" class="icon">
+                <div>
+                    <h4>Balance Information</h4>
+                    Current account Balance: <input type="number" id="accountbalance" value = "0"><br>
+                    Current cash balance: <input type="number" id="cashbalance" value = "0"><br>
+                    <button onclick="change()">change</button>
+                </div>
+            </div>
+            <div class="info">
+                <img src="F:\IT KMITL\LAB\WEBLAB\itf-it68070199\picture\toolbox.png" class="icon">
+                <div>
+                    <h4>Bank Operation</h4>
+                    <select id="operation">
+                        <option value="Deposit">Deposit</option>
+                        <option value="Withdraw">Withdraw</option>
+                    </select>
+                    <input><br>
+                    <button onclick="change()">proceed</button>
+                </div> 
+            </div>
+        </div>
+        <div>
+            <h2>Financial Tools</h2>
+            <div class="info">
+                <img src="F:\IT KMITL\LAB\WEBLAB\itf-it68070199\picture\banknote.png" class="icon">
+                <div>
+                    <h4>Currency Converter</h4>
+                    Input Balance: <input type="number" id="inputbalance" value = "0"><br>
+                    Output balance: <input type="number" id="outputbalance" value = "0"><br>
+                    Input Currency: <select id="currency">
+                        <option value="USD">USD</option>
+                        <option value="THB">THB</option>
+                    </select>
+                    <button>Convert</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="move">
         <button onclick="add()">+1</button>
     </div>
     <script src = "script.js"></script>
