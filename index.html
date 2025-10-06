@@ -1,79 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>68070199</title>
-    <link rel = "stylesheet" href = "style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>68070199</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink&display=swap" rel="stylesheet">
+</head>
 <body>
-    <nav>
-        <p>68070199</p>
-        <h2>ITF Website</h2>
-        <p>Week14</p>
-    </nav>
+  <nav>
+    <p>68070199</p>
+    <h2>ITF Website</h2>
+    <p>Week14</p>
+  </nav>
+  <div id="outputBox" class="box move" style="border:1px solid #ccc; padding:10px; height:150px; overflow-y:auto; white-space:pre-line;"></div>
 
-    <div class="info">
-        <img src="\picture\cat-walid.gif" style="float: left;width: 100px;">
-        <div class="HeadingText">
-            <h1><b>ITF Simple Bank</b></h1>
-            <p>Welcome to my first HTML + CSS + JS website!</p>
-        </div>
-    </div>
-    <div class="box move">
+  <div class="box move">
+    <div>
+      <h2>Account Overview</h2>
+
+      <div class="info">
+        <img src="./picture/user.png" alt="icon" class="icon">
         <div>
-            <h2>Account Overview</h2>
-            <div class="info">
-                <img src="\picture\user.png" alt="icon" class="icon">
-                <div>
-                    <h4>Account Information</h4>
-                    <p>Name: Athikarn Siengsai</p>
-                    <p>Type: Savings Account</p>
-                </div>
-            </div>
-            <div class="info">
-                <img src="\picture\briefcase.png" class="icon">
-                <div>
-                    <h4>Balance Information</h4>
-                    Current account Balance: <input type="number" id="accountbalance" value = "0"><br>
-                    Current cash balance: <input type="number" id="cashbalance" value = "0"><br>
-                    <button onclick="change()">change</button>
-                </div>
-            </div>
-            <div class="info">
-                <img src="\picture\toolbox.png" class="icon">
-                <div>
-                    <h4>Bank Operation</h4>
-                    <select id="operation">
-                        <option value="Deposit">Deposit</option>
-                        <option value="Withdraw">Withdraw</option>
-                    </select>
-                    <input><br>
-                    <button onclick="change()">proceed</button>
-                </div> 
-            </div>
+          <h4>Account Information</h4>
+          <p>Name: Athikarn Siengsai</p>
+          <p>Type: Savings Account</p>
         </div>
+      </div>
+
+      <div class="info">
+        <img src="./picture/briefcase.png" class="icon">
         <div>
-            <h2>Financial Tools</h2>
-            <div class="info">
-                <img src="\picture\banknote.png" class="icon">
-                <div>
-                    <h4>Currency Converter</h4>
-                    Input Balance: <input type="number" id="inputbalance" value = "0"><br>
-                    Output balance: <input type="number" id="outputbalance" value = "0"><br>
-                    Input Currency: <select id="currency">
-                        <option value="USD">USD</option>
-                        <option value="THB">THB</option>
-                    </select>
-                    <button>Convert</button>
-                </div>
-            </div>
+          <h4>Balance Information</h4>
+          Current account balance: <input type="number" id="accountBalance" value="0"><br>
+          Current cash balance: <input type="number" id="cashBalance" value="0"><br>
+          <button onclick="updateBalance()">Update</button>
         </div>
+      </div>
+
+      <div class="info">
+        <img src="./picture/banknote.png" class="icon">
+        <div>
+          <h4>Bank Operation</h4>
+          <select id="operationType">
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+          </select>
+          <input type="number" id="operationAmount" placeholder="Enter amount"><br>
+          <button onclick="performOperation()">Proceed</button>
+        </div> 
+      </div>
     </div>
 
-    <div class="move">
-        <button onclick="add()">+1</button>
+    <div>
+      <h2>Financial Tools</h2>
+      <div class="info">
+        <img src="./picture/toolbox.png" class="icon">
+        <div>
+          <h4>Currency Converter</h4>
+          Input Balance: <input type="number" id="inputBalance" value="0"><br>
+          Output balance: <input type="text" id="outputBalance"><br>
+          Input Currency: 
+          <select id="inputCurrency">
+            <option value="USD">USD</option>
+            <option value="THB">THB</option>
+          </select>
+          <button>Convert</button>
+        </div>
+      </div>
     </div>
-    <script src = "script.js"></script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
